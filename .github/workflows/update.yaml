@@ -32,7 +32,7 @@ jobs:
           mkdir -p files
           wget "https://raw.githubusercontent.com/dmitriysafronov/ssl-refresher/${{ steps.git-version.outputs.tag }}/ssl-refresher" -O files/ssl-refresher
 
-      - uses: peter-evans/create-pull-request@v3
+      - uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: "upgrade/ssl-refresher/${{ steps.git-version.outputs.tag }}"
